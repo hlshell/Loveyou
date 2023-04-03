@@ -11,7 +11,7 @@ function Container(wish, time, texts) {
     this.renderTexts(this.texts);
     document.querySelector('.pass-time .finalText').innerHTML = this.finalText;
     setInterval(() => {
-        this.passedSeconds = Math.ceil((+ new Date() - new Date(this.beginDate).getTime()) / 1000);
+        this.passedSeconds = Math.ceil((new Date() - new Date(this.beginDate).getTime()) / 1000);
         let list = ['days', 'hours', 'minutes', 'seconds'];
 
         list.forEach(item => {
